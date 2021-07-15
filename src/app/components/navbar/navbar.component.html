@@ -1,0 +1,43 @@
+<nav class="navbar navbar-1 navbar-expand-lg fixed-top">
+    <a class="navbar-brand ml-5" href="#">
+        <h3>Amazone</h3>
+    </a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item mr-3">
+                <a class="nav-link" routerLink="/">Home </a>
+            </li>
+
+            <li class="nav-item dropdown  mr-2"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                    Categories </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a class="dropdown-item" routerLink="/products/category/1">Tshirts</a></li>
+                    <li><a class="dropdown-item" routerLink="/products/category/2">Casual Shirts</a></li>
+                    <li><a class="dropdown-item" routerLink="/products/category/3">Coat Suit </a></li>
+                    <li><a class="dropdown-item" routerLink="/products/category/4">Salwar suit </a></li>
+                    <li><a class="dropdown-item" routerLink="/products/category/5">Shoes </a></li>
+                    <li><a class="dropdown-item" routerLink="/products/category/6">Jeans</a></li>
+                </ul>
+            </li>
+            <li class="nav-item  mr-2">
+                <a class="nav-link">Contact us</a>
+            </li>
+            <li class="nav-item  mr-2">
+                <a class="nav-link">About</a>
+            </li>
+        </ul>
+        <div class="user  mr-2" style="cursor: pointer;">
+            <a routerLink="/signin" class="nav-link"> <i class="fa fa-user" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="icons pr-5 ml-1" routerLink="/cart" style="cursor: pointer;">
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            <div class="badge text-danger text-bold">{{cart.getCartLength()}}</div>
+
+        </div>
+
+    </div>
+</nav>

@@ -1,0 +1,86 @@
+<div class="container mt-3">
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card mb-5">
+            <div class="card-body">
+                <div class="checkout_products">
+                    <h2 class="cart-title text-center">Cart Products list :</h2>
+                    <p class="price">Price</p>
+                    <div class="checkout_product" *ngFor="let p of checkout_products">
+                        <img src="{{p.productImg}}" alt="" class="checkout_product_img">
+                        <div class="checkout_product_info">
+                            <p class="checkout_product_title">
+                                {{p.productName}}
+                            </p>
+                            <img src="https://cdn2.hubspot.net/hubfs/4567260/0_KZ8hBw7pQZFFt2Mt.png" alt="">
+                            <p class="checkout_product_in_stock">In Stock</p>
+                            <div class="checkout_product_gift">
+                                <p>This is a gift</p>
+                                <a routerLink="/" class="checkout_product_more"> Contiue Shopping</a>
+                            </div>
+                            <div class="checkout_options">
+                                <div class="checkout_dropdown">
+                                </div>
+                                <a (click)="removeItem(p)"> Delete</a>
+                                <a href="#">Save for later</a>
+                                <a href="#">Compare with similar items</a>
+                            </div>
+                        </div>
+                        <div class="checkout_products_price">
+                            <p> <strong>Rs.{{p.price}}</strong> </p>
+                        </div>
+                    </div>
+                    <div class="checkout_products_subtotal">
+                        <p>Subtotal ({{shopping_cart_s.getCartLength()}} items):
+                            <strong>Rs. {{shopping_cart_s.getTotal()}} /-</strong>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card mb-3">
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label>Have coupon?</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="" placeholder="Coupon code">
+                            <span class="input-group-append">
+                                <button class="btn btn-primary">Apply</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div> <!-- card-body.// -->
+        </div> <!-- card.// -->
+
+        <div class="card">
+            <div class="card-body p-4">
+                <dl class="dlist-align">
+                    <dt>Total price:</dt>
+                    <dd class="text-right">Rs. {{shopping_cart_s.getTotal()}} /-</dd>
+                </dl>
+                <dl class="dlist-align">
+                    <dt>Discount:</dt>
+                    <dd class="text-right text-danger">Rs.100 /-</dd>
+                </dl>
+                <dl class="dlist-align">
+                    <dt>Total:</dt>
+                    <dd class="text-right text-dark b"><strong>Rs. {{shopping_cart_s.getTotal() -100}} /-</strong></dd>
+                </dl>
+                <hr>
+                <p class="text-center mb-3">
+                    <img src="/././assets/payments.png" height="26">
+                </p>
+                <a routerLink = "/checkout"  class="btn btn-primary btn-block"> Make Purchase </a>
+                <a routerLink = "/products" class="btn btn-success btn-block">Continue Shopping</a>
+            </div> <!-- card-body.// -->
+        </div> <!-- card.// -->
+    </div>
+
+</div><!-- row end -->
+</div>  <!-- container end -->

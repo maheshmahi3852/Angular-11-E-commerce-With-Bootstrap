@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+*{
+    box-sizing: border-box;
+
+}
+.toast-success {
+    background-color: #51A351 !important;
+  }
+  .toast-error {
+    background-color: #BD362F !important;
+  }
+  .toast-info {
+    background-color: #2F96B4 !important;
+  }
+  .toast-warning {
+    background-color: #F89406 !important;
+  }
+  #toast-container {
+    top: 60px;
+  }
+  .form-control:focus{
+    box-shadow: none;
+   }

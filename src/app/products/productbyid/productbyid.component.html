@@ -1,0 +1,35 @@
+<div class="container text-center productid">
+
+<div class="row align-items-center">
+    <div class="col-md-4 offset-md-2">
+        <div class="mx-auto align-content-center">
+            <div class="card mt-2 p-2" style="width: 20rem">   <!-- card start -->
+                <div class="card-body">
+                    <div class="card-img ">
+                        <img src="{{ productData.productImg }}" class="img-fluid" style="width: 220px;height: 300px;" />
+                    </div>
+                    <h5 class="card-title text-success mt-3">
+                        {{ productData.productName }}
+                    </h5>
+                    <p class="card-text ">{{ productData.description }}</p>
+                    <p>Price : Rs.{{ productData.price }}</p>
+                </div>     <!-- card body end -->
+            </div>   <!-- card end -->
+        </div> <!-- ng for data end -->
+    </div>
+
+    <div class="col-md-4">
+        <div class="card" style="width: 20rem">
+            <div class="card-body">
+        <p class="text-secondary">Rating : {{productData.rating}} stars</p>
+        <h5>More details :</h5>
+        <p class="card-text">Color: {{productData.color}}</p>
+        <p class="card-text">In stock: {{productData.isAvailable}}</p>
+        <p class="card-text">Reviewed by: {{productData.reviews}}</p>
+        <button class="btn btn-success w-50" routerLink='/products'> Back to home</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+</div> <!-- container end -->

@@ -1,0 +1,68 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    border-radius: 1rem;
+  }
+
+  h3{
+    font-family: sans-serif;
+    margin: 100px auto;
+    color: #228B22;
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  h3:before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #000;
+    left: 0;
+    top: 50%;
+    position: absolute;
+  }
+  
+  h3:after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #000;
+    right: 0;
+    top: 50%;
+    position: absolute;
+  }
+  .form{
+    padding-left: 120px;
+  }
+
+  .search-icon{
+    position: absolute;   
+    right: 40%;
+    cursor: pointer;
+    left: 75%;
+    bottom: 10px ;
+    color: grey;
+    }
+    i{
+      font-size: 26px;
+      color: coral;
+    }
+    .title{
+      margin-top: 10px;
+    }
+    .search{
+      font-size: 16px;
+
+    }

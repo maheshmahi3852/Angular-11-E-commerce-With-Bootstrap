@@ -1,0 +1,25 @@
+.nav-link{
+    color: #fff !important;
+}
+.navbar-1{
+    background-color:  white;
+    height: 9vh;
+    width: 100%;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+
+  }
+.nav-link{
+  color: black !important;
+}
+  .carousel-inner{
+    max-height: 350px !important;
+    /* padding-top: 56px; */
+  }
+
+form > input{
+  width:690px;
+}
+
+.badge{
+  vertical-align : top
+}

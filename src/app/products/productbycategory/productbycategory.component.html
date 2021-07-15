@@ -1,0 +1,29 @@
+<div class="produc-cat">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="list-group">
+                <a class="list-group-item text-primary" *ngFor="let item of cat"
+                    routerLink="/products/category/{{item.id}}">{{item.categoryName}}</a>
+            </div>
+        </div>
+        <div class="col-md-10 card-deck card-columns">
+            <div class="mx-auto align-content-center" *ngFor="let item of product">
+                <div class="card p-4" style="width: 15rem">
+                    <!-- card start -->
+                    <div class="card-body">
+                        <div class="card-img ">
+                            <img src="{{ item.productImg }}" class="img-fluid" style="width:130px;height: 180px;" />
+                        </div>
+                        <h5 class="card-title text-success mt-3">
+                            {{ item.productName }}
+                        </h5>
+                        <p class="card-text ">{{ item.description }}</p>
+                        <p>Price : Rs.{{ item.price }}</p>
+                    </div> <!-- card body end -->
+                    <button class="btn btn-primary mt-2 btn-sm" (click)="addToCart(item)"> Add to cart</button>
+                </div> <!-- card end -->
+            </div> <!-- ng for end -->
+
+        </div>
+    </div>
+</div>

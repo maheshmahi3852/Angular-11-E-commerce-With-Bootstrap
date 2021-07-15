@@ -1,0 +1,30 @@
+.checkout{
+    border-radius: 3px;
+    display: flex;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.checkout_left{
+    flex: 1;
+    width: 100%;
+
+}
+.checkout_left .checkout_empty{
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    text-align: center;
+    padding-top: 200px;
+}
+.checkout_empty .checkout_empty_title{
+    font-size: 40px;
+}
+.checkout_empty .checkout_empty_data{
+    font-size: 20px;
+}
+
+.checkout_right{
+    justify-content: flex-end;
+    margin-left: 20px;
+}
